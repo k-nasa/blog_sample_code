@@ -27,6 +27,12 @@ fn panic(_info: &core::panic::PanicInfo) -> ! {
 }
 
 fn main() {
+    hello();
+
+    loop {}
+}
+
+fn hello() {
     let hello_world = vec![
         'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '!', '\n',
     ];
@@ -34,7 +40,6 @@ fn main() {
     for c in hello_world {
         print!("{}", c);
     }
-    loop {}
 }
 
 #[macro_export]
